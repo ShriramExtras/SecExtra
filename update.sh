@@ -8,9 +8,11 @@ main(){
 	pleaseWaitAnimation
 
 	if [[ -f "MasterKey.c?raw=true" ]]; then
-
-		diff -qw MasterKey.c?raw=true .masterkey.c >.message.txt
+		
+		chmod 700 .masterkey.c
+		diff -qw MasterKey.c?raw=true .masterkey.c > /home/$USER/Documents/.Program-Files/.MasterKey/.message.txt
 		message=$(cat .message.txt)
+		chmod 000 .masterkey.c
 
 		if [[ $message == "Files MasterKey.c?raw=true and .masterkey.c differ" ]]; then
 			clear
@@ -79,7 +81,8 @@ main(){
 				sleep 1
 				pkill terminal
 			else
-				MasterKey.c?raw=true
+				rm MasterKey.c?raw=true
+				chmod 000 .masterkey.c
 			fi
 
 		else
@@ -87,6 +90,7 @@ main(){
 			echo "The app is upto date"
 			echo
 			rm MasterKey.c?raw=true
+			chmod 000 .masterkey.c
 		fi
 
 		rm .message.txt
