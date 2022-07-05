@@ -67,7 +67,7 @@ main(){
 				clear
 
 				rm .masterkey.c
-				mv MasterKey?raw=true .masterkey.c
+				mv MasterKey.c?raw=true .masterkey.c
 
 				rm .masterkey.out
 				gcc .masterkey.c -o .masterkey.out
