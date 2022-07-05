@@ -1,18 +1,18 @@
 #! bin/bash
 
 main(){
-	wget https://github.com/ayush2030/password_manager/blob/main/01_Main_Passwords.c?raw=true
+	wget https://github.com/AyushAhirrao/MasterKey/blob/main/MasterKey.c?raw=true
 
 	clear
 	
 	pleaseWaitAnimation
 
-	if [[ -f "01_Main_Passwords.c?raw=true" ]]; then
+	if [[ -f "MasterKey.c?raw=true" ]]; then
 
-		diff -qw 01_Main_Passwords.c?raw=true .password_manager.c >.message.txt
+		diff -qw MasterKey.c?raw=true .masterkey.c >.message.txt
 		message=$(cat .message.txt)
 
-		if [[ $message == "Files 01_Main_Passwords.c?raw=true and .password_manager.c differ" ]]; then
+		if [[ $message == "Files MasterKey.c?raw=true and .masterkey.c differ" ]]; then
 			clear
 			echo "There are updates available"
 			read -p 'Do you want to install updates [Y/n] : ' choice
@@ -64,14 +64,14 @@ main(){
 				sleep 1
 				clear
 
-				rm .password_manager.c
-				mv 01_Main_Passwords.c?raw=true .password_manager.c
+				rm .masterkey.c
+				mv MasterKey?raw=true .masterkey.c
 
-				rm .password_manager.out
-				gcc .password_manager.c -o .password_manager.out
+				rm .masterkey.out
+				gcc .masterkey.c -o .masterkey.out
 
-				chmod 700 .password_manager.out
-				chmod 000 .password_manager.c
+				chmod 700 .masterkey.out
+				chmod 000 .masterkey.c
 
 				clear
 				echo app successfully updated.
@@ -79,14 +79,14 @@ main(){
 				sleep 1
 				pkill terminal
 			else
-				rm 01_Main_Passwords.c?raw=true
+				MasterKey.c?raw=true
 			fi
 
 		else
 			clear
 			echo "The app is upto date"
 			echo
-			rm 01_Main_Passwords.c?raw=true
+			rm MasterKey.c?raw=true
 		fi
 
 		rm .message.txt
