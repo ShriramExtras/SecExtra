@@ -105,27 +105,27 @@ main(){
 
 
 pleaseWait(){
-    echo "Please wait"
+    echo "Checking for updates"
     sleep 0.25
     clear
 
-    echo "Please wait."
+    echo "Checking for updates."
     sleep 0.25
     clear
 
-    echo "Please wait.."
+    echo "Checking for updates.."
     sleep 0.25
     clear
 
-    echo "Please wait..."
+    echo "Checking for updates..."
     sleep 0.25
     clear
 
-    echo "Please wait .."
+    echo "Checking for updates .."
     sleep 0.25
     clear
 
-    echo "Please wait  ."
+    echo "Checking for updates  ."
     sleep 0.25
     clear
 }
