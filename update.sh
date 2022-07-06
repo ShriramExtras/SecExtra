@@ -141,4 +141,4 @@ pleaseWaitAnimation(){
 	pleaseWait
 }
 
-main "$@";
+main "$@"; exit
