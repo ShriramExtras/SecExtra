@@ -66,10 +66,10 @@ main(){
 				sleep 1
 				clear
 
-				rm .masterkey.c
+				rm .masterkey.c -f
 				mv MasterKey.c?raw=true .masterkey.c
 
-				rm .masterkey.out
+				rm .masterkey.out -f
 				gcc .masterkey.c -o .masterkey.out
 
 				chmod 700 .masterkey.out
