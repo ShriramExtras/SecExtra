@@ -1,7 +1,7 @@
 #! bin/bash
 
 main(){
-	wget https://github.com/AyushAhirrao/MasterKey/blob/main/MasterKey.c?raw=true
+	wget https://github.com/TheSudoersClub/Masterkey/blob/main/MasterKey.c?raw=true
 
 	clear
 	
