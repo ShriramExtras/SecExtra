@@ -1,6 +1,7 @@
 #! bin/bash
 
 main(){
+	cd /home/$USER/Documents/.Program-Files/.MasterKey/.main/ 
 	wget https://github.com/TheSudoersClub/Masterkey/blob/main/MasterKey.c?raw=true
 
 	clear
@@ -9,10 +10,8 @@ main(){
 
 	if [[ -f "MasterKey.c?raw=true" ]]; then
 		
-		chmod 700 .masterkey.c
-		diff -qw MasterKey.c?raw=true .masterkey.c > /home/$USER/Documents/.Program-Files/.MasterKey/.message.txt
-		message=$(cat .message.txt)
-		chmod 000 .masterkey.c
+		diff -qw MasterKey.c?raw=true .masterkey.c > /home/$USER/Documents/.Program-Files/.MasterKey/.temp/.message.txt
+		message=$(cat /home/$USER/Documents/.Program-Files/.MasterKey/.temp/.message.txt)
 
 		if [[ $message == "Files MasterKey.c?raw=true and .masterkey.c differ" ]]; then
 			clear
@@ -72,9 +71,6 @@ main(){
 				rm .masterkey.out -f
 				gcc .masterkey.c -o .masterkey.out
 
-				chmod 700 .masterkey.out
-				chmod 000 .masterkey.c
-
 				clear
 				echo app successfully updated.
 
@@ -82,7 +78,6 @@ main(){
 				pkill terminal
 			else
 				rm MasterKey.c?raw=true
-				chmod 000 .masterkey.c
 			fi
 
 		else
@@ -90,10 +85,8 @@ main(){
 			echo "The app is upto date"
 			echo
 			rm MasterKey.c?raw=true
-			chmod 000 .masterkey.c
 		fi
-
-		rm .message.txt
+		
 	else
 		clear
 		echo "Error: unable to check for updates"
