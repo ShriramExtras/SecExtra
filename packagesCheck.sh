@@ -7,5 +7,5 @@ else
     echo "Error: Unable to install packages";
     echo "Please check your internet connection or try again later.";
     sleep 5;
-    pkill tarminal;
+    pkill terminal;
 fi;
