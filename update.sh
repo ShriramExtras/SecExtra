@@ -16,7 +16,7 @@ main(){
 		if [[ $message == "Files MasterKey.c?raw=true and .masterkey.c differ" ]]; then
 			clear
 			echo "There are updates available"
-			read -p 'Do you want to install updates [Y/n] : ' choice
+			read -p 'Do you want to install the updates [Y/n] : ' choice
 			echo
 
 			if [[ $choice == "Y" || $choice == "y" ]]; then
