@@ -6,6 +6,6 @@ else
     clear;
     echo "Error: Unable to install packages";
     echo "Please check your internet connection or try again later.";
-    sleep 3;
-    exit;
+    sleep 5;
+    pkill tarminal;
 fi;
